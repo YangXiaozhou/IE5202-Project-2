@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -210,210 +210,125 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 14.
 
-<../Figures/pairplot1.png, id=1, 717.68124pt x 714.67pt>
-File: ../Figures/pairplot1.png Graphic file (type png)
+<../Figures/jpy_usd_three_periods.pdf, id=1, 867.24pt x 867.24pt>
+File: ../Figures/jpy_usd_three_periods.pdf Graphic file (type pdf)
 
-<use ../Figures/pairplot1.png>
-Package pdftex.def Info: ../Figures/pairplot1.png used on input line 22.
-(pdftex.def)             Requested size: 207.0021pt x 206.12578pt.
+<use ../Figures/jpy_usd_three_periods.pdf>
+Package pdftex.def Info: ../Figures/jpy_usd_three_periods.pdf used on input lin
+e 22.
+(pdftex.def)             Requested size: 345.0pt x 344.99754pt.
 
-<../Figures/jointplot1.png, id=3, 580.1675pt x 570.13pt>
-File: ../Figures/jointplot1.png Graphic file (type png)
+<../Figures/sacf_n_spacf_plot.pdf, id=2, 867.24pt x 433.62pt>
+File: ../Figures/sacf_n_spacf_plot.pdf Graphic file (type pdf)
 
-<use ../Figures/jointplot1.png>
-Package pdftex.def Info: ../Figures/jointplot1.png used on input line 30.
-(pdftex.def)             Requested size: 172.5pt x 169.51791pt.
+<use ../Figures/sacf_n_spacf_plot.pdf>
+Package pdftex.def Info: ../Figures/sacf_n_spacf_plot.pdf used on input line 31
+.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
 
-<../Figures/jointplot2.png, id=4, 435.6275pt x 425.59pt>
-File: ../Figures/jointplot2.png Graphic file (type png)
+<../Figures/three_lag_plots.pdf, id=3, 867.24pt x 433.62pt>
+File: ../Figures/three_lag_plots.pdf Graphic file (type pdf)
 
-<use ../Figures/jointplot2.png>
-Package pdftex.def Info: ../Figures/jointplot2.png used on input line 38.
-(pdftex.def)             Requested size: 172.5pt x 168.52505pt.
+<use ../Figures/three_lag_plots.pdf>
+Package pdftex.def Info: ../Figures/three_lag_plots.pdf used on input line 40.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
 
-<../Figures/jointplot3.png, id=5, 435.6275pt x 425.59pt>
-File: ../Figures/jointplot3.png Graphic file (type png)
+<../Figures/optimal_alpha_ewma.pdf, id=4, 433.62pt x 289.08pt>
+File: ../Figures/optimal_alpha_ewma.pdf Graphic file (type pdf)
 
-<use ../Figures/jointplot3.png>
-Package pdftex.def Info: ../Figures/jointplot3.png used on input line 46.
-(pdftex.def)             Requested size: 172.5pt x 168.52505pt.
+<use ../Figures/optimal_alpha_ewma.pdf>
+Package pdftex.def Info: ../Figures/optimal_alpha_ewma.pdf used on input line 5
+4.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
 
-<../Figures/box_page_cat.png, id=6, 1084.05pt x 578.16pt>
-File: ../Figures/box_page_cat.png Graphic file (type png)
+Overfull \hbox (2.38847pt too wide) in paragraph at lines 62--63
+\OT1/cmr/m/n/10 Several ARIMA mod-els are built based on both orig-i-nal data a
+nd log-transformed
+ []
 
-<use ../Figures/box_page_cat.png>
-Package pdftex.def Info: ../Figures/box_page_cat.png used on input line 56.
-(pdftex.def)             Requested size: 345.0pt x 184.00044pt.
+<../Figures/error_estimation_1.pdf, id=5, 867.24pt x 578.16pt>
+File: ../Figures/error_estimation_1.pdf Graphic file (type pdf)
 
-<../Figures/density_plot.png, id=7, 745.78625pt x 485.815pt>
-File: ../Figures/density_plot.png Graphic file (type png)
+<use ../Figures/error_estimation_1.pdf>
+Package pdftex.def Info: ../Figures/error_estimation_1.pdf used on input line 6
+7.
+(pdftex.def)             Requested size: 345.0pt x 229.99835pt.
 
-<use ../Figures/density_plot.png>
-Package pdftex.def Info: ../Figures/density_plot.png used on input line 66.
-(pdftex.def)             Requested size: 345.0pt x 224.73781pt.
+<../Figures/error_estimation_2.pdf, id=6, 867.24pt x 578.16pt>
+File: ../Figures/error_estimation_2.pdf Graphic file (type pdf)
+
+<use ../Figures/error_estimation_2.pdf>
+Package pdftex.def Info: ../Figures/error_estimation_2.pdf used on input line 7
+5.
+(pdftex.def)             Requested size: 345.0pt x 229.99835pt.
+
+<../Figures/data_1_d.pdf, id=7, 433.62pt x 289.08pt>
+File: ../Figures/data_1_d.pdf Graphic file (type pdf)
+
+<use ../Figures/data_1_d.pdf>
+Package pdftex.def Info: ../Figures/data_1_d.pdf used on input line 85.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+
+<../Figures/res_after_arma.pdf, id=8, 867.24pt x 433.62pt>
+File: ../Figures/res_after_arma.pdf Graphic file (type pdf)
+
+<use ../Figures/res_after_arma.pdf>
+Package pdftex.def Info: ../Figures/res_after_arma.pdf used on input line 95.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+
+<../Figures/sacf_n_spacf_after_arma.pdf, id=9, 867.24pt x 433.62pt>
+File: ../Figures/sacf_n_spacf_after_arma.pdf Graphic file (type pdf)
+
+<use ../Figures/sacf_n_spacf_after_arma.pdf>
+Package pdftex.def Info: ../Figures/sacf_n_spacf_after_arma.pdf used on input l
+ine 103.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
  [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../Figu
-res/pairplot1.png>] [2 <../Figures/jointplot1.png> <../Figures/jointplot2.png>]
- [3 <../Figures/jointplot3.png> <../Figures/box_page_cat.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <../
+Figures/jpy_usd_three_periods.pdf>] [3 <../Figures/sacf_n_spacf_plot.pdf> <../F
+igures/three_lag_plots.pdf
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 87.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 87.
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/three_lag_plots.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+>] [4 <../Figures/optimal_alpha_ewma.pdf> <../Figures/error_estimation_1.pdf
 
-Overfull \hbox (7.15063pt too wide) in paragraph at lines 99--130
- [] 
- []
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/error_estimation_
+1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [5 <../Figures/error_estimation_2.pdf> <../Figures/data_1_d.pdf
 
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/data_1_d.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>] [6 <../Figures/res_after_arma.pdf> <../Figures/sacf_n_spacf_after_arma.pdf
 
-Overfull \hbox (40.37315pt too wide) in paragraph at lines 99--130
- [] 
- []
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/sacf_n_spacf_afte
+r_arma.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>] <../Figures/error_estimation_3.pdf, id=310, 867.24pt x 578.16pt>
+File: ../Figures/error_estimation_3.pdf Graphic file (type pdf)
 
-[4 <../Figures/density_plot.png>] [5]
-<../Figures/predictor_corr_1.png, id=39, 424.58624pt x 425.59pt>
-File: ../Figures/predictor_corr_1.png Graphic file (type png)
-
-<use ../Figures/predictor_corr_1.png>
-Package pdftex.def Info: ../Figures/predictor_corr_1.png used on input line 169
-.
-(pdftex.def)             Requested size: 207.0021pt x 207.48889pt.
-
-<../Figures/normality_check_simple.png, id=40, 389.455pt x 266.9975pt>
-File: ../Figures/normality_check_simple.png Graphic file (type png)
-
-<use ../Figures/normality_check_simple.png>
-Package pdftex.def Info: ../Figures/normality_check_simple.png used on input li
-ne 179.
-(pdftex.def)             Requested size: 207.0021pt x 141.91132pt.
- [6]
-<../Figures/residual_plot_simple.png, id=45, 389.455pt x 376.40625pt>
-File: ../Figures/residual_plot_simple.png Graphic file (type png)
-
-<use ../Figures/residual_plot_simple.png>
-Package pdftex.def Info: ../Figures/residual_plot_simple.png used on input line
- 189.
-(pdftex.def)             Requested size: 207.0021pt x 200.06296pt.
- [7 <../Figures/predictor_corr_1.png> <../Figures/normality_check_simple.png>]
-<../Figures/prp_simple_1.png, id=53, 714.67pt x 570.13pt>
-File: ../Figures/prp_simple_1.png Graphic file (type png)
-
-<use ../Figures/prp_simple_1.png>
-Package pdftex.def Info: ../Figures/prp_simple_1.png used on input line 205.
-(pdftex.def)             Requested size: 345.0pt x 275.2252pt.
-
-<../Figures/prp_simple_2.png, id=54, 714.67pt x 570.13pt>
-File: ../Figures/prp_simple_2.png Graphic file (type png)
-
-<use ../Figures/prp_simple_2.png>
-Package pdftex.def Info: ../Figures/prp_simple_2.png used on input line 213.
-(pdftex.def)             Requested size: 345.0pt x 275.2252pt.
-
-<../Figures/feature_importance.png, id=55, 506.89375pt x 388.45125pt>
-File: ../Figures/feature_importance.png Graphic file (type png)
-
-<use ../Figures/feature_importance.png>
-Package pdftex.def Info: ../Figures/feature_importance.png used on input line 2
-28.
-(pdftex.def)             Requested size: 241.49895pt x 185.06749pt.
- [8 <../Figures/residual_plot_simple.png>] [9 <../Figures/prp_simple_1.png>] [1
-0 <../Figures/prp_simple_2.png> <../Figures/feature_importance.png>] [11]
-Overfull \hbox (9.92842pt too wide) in paragraph at lines 274--286
- [] 
- []
-
-<../Figures/cv_mae_complex.png, id=72, 621.32124pt x 376.40625pt>
-File: ../Figures/cv_mae_complex.png Graphic file (type png)
-
-<use ../Figures/cv_mae_complex.png>
-Package pdftex.def Info: ../Figures/cv_mae_complex.png used on input line 338.
-(pdftex.def)             Requested size: 345.0pt x 209.00557pt.
-
-<../Figures/normality_check_complex.png, id=73, 389.455pt x 266.9975pt>
-File: ../Figures/normality_check_complex.png Graphic file (type png)
-
-<use ../Figures/normality_check_complex.png>
-Package pdftex.def Info: ../Figures/normality_check_complex.png used on input l
-ine 348.
-(pdftex.def)             Requested size: 207.0021pt x 141.91132pt.
-
-<../Figures/residual_plot_complex.png, id=74, 395.4775pt x 376.40625pt>
-File: ../Figures/residual_plot_complex.png Graphic file (type png)
-
-<use ../Figures/residual_plot_complex.png>
-Package pdftex.def Info: ../Figures/residual_plot_complex.png used on input lin
-e 358.
-(pdftex.def)             Requested size: 207.0021pt x 197.0189pt.
-
-<../Figures/prp_complex_1.png, id=75, 714.67pt x 570.13pt>
-File: ../Figures/prp_complex_1.png Graphic file (type png)
-
-<use ../Figures/prp_complex_1.png>
-Package pdftex.def Info: ../Figures/prp_complex_1.png used on input line 368.
-(pdftex.def)             Requested size: 276.00105pt x 220.18364pt.
-
-<../Figures/prp_complex_2.png, id=76, 714.67pt x 570.13pt>
-File: ../Figures/prp_complex_2.png Graphic file (type png)
-
-<use ../Figures/prp_complex_2.png>
-Package pdftex.def Info: ../Figures/prp_complex_2.png used on input line 376.
-(pdftex.def)             Requested size: 276.00105pt x 220.18364pt.
-
-<../Figures/prp_complex_3.png, id=77, 714.67pt x 570.13pt>
-File: ../Figures/prp_complex_3.png Graphic file (type png)
-
-<use ../Figures/prp_complex_3.png>
-Package pdftex.def Info: ../Figures/prp_complex_3.png used on input line 384.
-(pdftex.def)             Requested size: 276.00105pt x 220.18364pt.
-
-<../Figures/prp_complex_4.png, id=78, 714.67pt x 570.13pt>
-File: ../Figures/prp_complex_4.png Graphic file (type png)
-
-<use ../Figures/prp_complex_4.png>
-Package pdftex.def Info: ../Figures/prp_complex_4.png used on input line 392.
-(pdftex.def)             Requested size: 276.00105pt x 220.18364pt.
-
-<../Figures/prp_complex_5.png, id=79, 714.67pt x 570.13pt>
-File: ../Figures/prp_complex_5.png Graphic file (type png)
-
-<use ../Figures/prp_complex_5.png>
-Package pdftex.def Info: ../Figures/prp_complex_5.png used on input line 400.
-(pdftex.def)             Requested size: 276.00105pt x 220.18364pt.
- [12] [13 <../Figures/cv_mae_complex.png>]
-[14 <../Figures/normality_check_complex.png> <../Figures/residual_plot_complex.
-png>] [15 <../Figures/prp_complex_1.png>] [16 <../Figures/prp_complex_2.png> <.
-./Figures/prp_complex_3.png>] [17 <../Figures/prp_complex_4.png> <../Figures/pr
-p_complex_5.png>] (./Report_A0113538J.aux) ) 
+<use ../Figures/error_estimation_3.pdf>
+Package pdftex.def Info: ../Figures/error_estimation_3.pdf used on input line 1
+21.
+(pdftex.def)             Requested size: 345.0pt x 229.99835pt.
+ [7 <../Figures/error_estimation_3.pdf>] (./Report_A0113538J.aux) ) 
 Here is how much of TeX's memory you used:
- 2429 strings out of 492995
- 38303 string characters out of 6132704
- 105048 words of memory out of 5000000
- 5926 multiletter control sequences out of 15000+600000
- 8514 words of font info for 30 fonts, out of 8000000 for 9000
+ 2337 strings out of 492995
+ 36247 string characters out of 6132704
+ 98905 words of memory out of 5000000
+ 5851 multiletter control sequences out of 15000+600000
+ 7587 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,37p,950b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb>
-Output written on Report_A0113538J.pdf (17 pages, 780816 bytes).
+ 39i,6n,37p,460b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Report_A0113538J.pdf (7 pages, 384560 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 374 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
