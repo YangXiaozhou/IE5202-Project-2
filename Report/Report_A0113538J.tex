@@ -24,7 +24,7 @@ The exchange rate from 1980 to 1995 seems to have experienced three distinct pha
 	\label{fig:jpy_usd_three_peridos}
 \end{figure}
 %
-The time series always exhibit strong autocorrelation even beyong 100 lags as shown in Fig \ref{fig:sacf_n_spacf_plot}. SPACF plot shows the lag cuts off after order 1. This indicates an AR(1) model might be appropriate for the time series. 
+The time series exhibits strong autocorrelation even beyong 100 lags as shown in Fig \ref{fig:sacf_n_spacf_plot}. SPACF plot shows the lag cuts off after order 1. This indicates an AR(1) model might be appropriate for the time series. 
 %
 \begin{figure}[hbtp]
 	\centering
@@ -45,7 +45,7 @@ Judging from the lag plots in Fig \ref{fig:three_lag_plots}, historical values a
 Also, no obvious seasonal patterns could be observed. 
 
 
-\section{Model Building}
+\section{Part 1}
 \subsection{Exponential Smoothing Model}
 With exponentially weighted moving average, due to the strong autocorrelation, the optimal smoothing parameter, alpha, is found to be 1 for the smallest root mean square error (RMSE), see Fig \ref{fig:optimal_alpha_ewma}.
 %
@@ -59,7 +59,7 @@ With exponentially weighted moving average, due to the strong autocorrelation, t
 Similar results are shown when double exponential smoothing model is constructed with the parameter combination of (alpha = 1, beta = 0.12) achieving the least RMSE. 
 
 \subsection{ARIMA Model}
-Several ARIMA models are built based on both original data and log-transformed data. 10-fold cross validation RMSEs of 1-step-ahead forecast are reported in Fig \ref{fig:error_estimation_1} for the orginal data and Fig \ref{fig:error_estimation_2} for log-transformed data. For both types of data, AR(1) and MA(1) models on 1st order differencing transformed data perform the best, with the lowest RMSE of 1.048. 
+Several ARIMA models are built based on both original data and log-transformed data. 10-fold cross validation RMSEs of 1-step-ahead forecast are reported in Fig \ref{fig:error_estimation_1} for the orginal data and Fig \ref{fig:error_estimation_2} for log-transformed data. For both types of data, AR(1) and MA(1) models on 1st order differencing transformed data perform the best, with the lowest RMSE of 1.048, shown in the two figures as the red horizontal dash lines. This is expected since the foreign exchange rate is a highly autocorrelated time series, hence immediate past values are actually great predictors of the next-day value.
 
 %
 \begin{figure}[hbtp]
@@ -78,7 +78,7 @@ Several ARIMA models are built based on both original data and log-transformed d
 \end{figure}
 %
 
-Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data is not stationary, a first order differencing transformation is applied to make it stationary. The resultant time series as shown in Fig \ref{fig:data_1_d} is stationary. 
+Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data is not stationary, a first order differencing transformation is applied to make it stationary. The resultant time series as shown in Fig \ref{fig:data_1_d} is much more stationary than the original series. Residuals from ARIMA(0,1,1) model are uncorrelated and roughly follow a normal distribution with zero mean, as shown in Fig \ref{fig:res_after_arma} and Fig \ref{fig:sacf_n_spacf_after_arma}. This indicates that ARIMA(0,0,1) is an appropriate model for the time series. 
 %
 \begin{figure}[hbtp]
 	\centering
@@ -87,13 +87,11 @@ Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data i
 	\label{fig:data_1_d}
 \end{figure}
 %
-
-
 %
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/res_after_arma.pdf}
-	\caption{Residuals of ARIMA(0,0,1) Model.}
+	\caption{Residuals of ARIMA(0,1,1) Model.}
 	\label{fig:res_after_arma}
 \end{figure}
 %
@@ -101,19 +99,25 @@ Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data i
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/sacf_n_spacf_after_arma.pdf}
-	\caption{SACF and SPACF of Residuals from ARIMA(0,0,1) Model.}
+	\caption{SACF and SPACF of Residuals from ARIMA(0,1,1) Model.}
 	\label{fig:sacf_n_spacf_after_arma}
 \end{figure}
 %
 
 \subsection{Regression on Time}
-A least square regression model is developed to model the time series, initially with only time-related information. These information are year, month, day and day of the week. Also, an indicator variable to indicate whether the year is before or after 1986 where the drastic drop happens. However, this regression model does not perform well by the 10-fold cross validation rmse with a high value of 369. 
+A least square regression model is developed to model the time series, initially with only time-related information. These include variables of \textit{Year}, \textit{Month}, \textit{Day} and \textit{Day of the Week}. Also, an indicator variable to indicate whether the year is before or after 1986 where the drastic drop happens. However, this regression model does not perform well as the 10-fold cross validation RMSE is a high value of 369. 
 
-Regression on time model is not adequate enough to predict the time series, based on the 10-fold rmse, which is much higher than that of the MA(1) model on first order differenced data. Also, the error is heavily pulled up by the period where the exchange rate declined drastically during 1986. Excluding the error of that test, the average RMSE of the rest is around 24, which is still one-fold higher than the previous model.
+Hence, regression based solely on time information is not adequate enough to predict the time series, which is much higher than that of the ARIMA(0,1,1) model. Also, the error is heavily pulled up by the period where the exchange rate declined drastically during 1986. This is expected since the model cannot learn about this drastic drop based on time predictors alone, while ARIMA model allows the model to learn about the drop from the 1st order differencing. Even if the error of that period for regression is omitted, the average RMSE of the rest is still around 24, which is about one-fold higher than that of the ARIMA model.
 
-However, with lagged data added to the predictors, the performance of the model improves tremendously. 
+However, once the regression model has lagged data as one of the predictors, the performance improves tremendously. This can be seen from the error estimation plot of Fig \ref{fig:error_estimation_3} where four different regression models' performance are compared:
+\begin{enumerate}
+	\item Lag 1: Regression on time information and Lag 1 value
+	\item Lag 5: Regression on time information and Lag 5 value
+	\item w Lag Diff: Regression on time information, Lag 1 value and the difference between Lag 1 and Lag 2 value
+	\item  Lag \& Cat: Regression on only 1986 indicator variable, Lag 1 data and the difference between Lag 1 and Lag 2 data. This is the simplest version among all four models.
+\end{enumerate}
 
-Result: Using single currency information, regression on lag\_1, lag2-lag1 and indicator variable performs the best, although considering uncertainties, they could be considered the same, for 10-fold cross validation in terms of rmse of 1-step-ahead forecasting. 
+As seen from Fig \ref{fig:error_estimation_3}, The fourth model performs the best, obtaining the lowest RMSE of 1.048 wihch is identical as the ARIMA(0,1,1) model. This is not surprising since both models utilized information on Lag 1 data and the difference between previous two values. The whole dataset was fitted with the best regression model and Table \ref{tab:regression_results} reports the regression summary. Each of the model parameters are statistically significant and both R-scores are very high. The residuals of the model seem to be uncorrelated with each other (Fig \ref{fig:sacf_n_spacf_after_reg}) and follows a normal distribution with zero mean (Fig \ref{fig:res_after_reg}). 
 
 %
 \begin{figure}[hbtp]
@@ -124,13 +128,7 @@ Result: Using single currency information, regression on lag\_1, lag2-lag1 and i
 \end{figure}
 %
 
-The best performing model obtains the lowest RMSE of 1.048, it contains three predictors: 
-\begin{itemize}
-	\item Indicator variable: true if it is before 1986
-	\item Difference between lag 1 value and lag 2 value
-	\item Lag 1 value
-\end{itemize}
-
+\begin{table}
 \begin{center}
 	\begin{tabular}{lclc}
 		\toprule
@@ -160,10 +158,30 @@ The best performing model obtains the lowest RMSE of 1.048, it contains three pr
 		\textbf{Kurtosis:}      &   7.132 & \textbf{  Cond. No.          } & 1.49e+03  \\
 		\bottomrule
 	\end{tabular}
-	%\caption{OLS Regression Results}
+
 \end{center}
+\caption{OLS Regression Results}
+\label{tab:regression_results}
+\end{table}
 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/res_after_reg.pdf}
+	\caption{Residuals of Regression Model.}
+	\label{fig:res_after_reg}
+\end{figure}
+%
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/sacf_n_spacf_after_reg.pdf}
+	\caption{SACF and SPACF of Residuals from Regression Model.}
+	\label{fig:sacf_n_spacf_after_reg}
+\end{figure}
+%
 
-
+\section{Part 2}
+Cross validation RMSE does not improve when information of other currencies are included in to the regression model. Hence they are not used when doing the prediction for the test data.
 
 \end{document}          

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -273,7 +273,7 @@ Package pdftex.def Info: ../Figures/data_1_d.pdf used on input line 85.
 File: ../Figures/res_after_arma.pdf Graphic file (type pdf)
 
 <use ../Figures/res_after_arma.pdf>
-Package pdftex.def Info: ../Figures/res_after_arma.pdf used on input line 95.
+Package pdftex.def Info: ../Figures/res_after_arma.pdf used on input line 93.
 (pdftex.def)             Requested size: 345.0pt x 172.49876pt.
 
 <../Figures/sacf_n_spacf_after_arma.pdf, id=9, 867.24pt x 433.62pt>
@@ -281,7 +281,7 @@ File: ../Figures/sacf_n_spacf_after_arma.pdf Graphic file (type pdf)
 
 <use ../Figures/sacf_n_spacf_after_arma.pdf>
 Package pdftex.def Info: ../Figures/sacf_n_spacf_after_arma.pdf used on input l
-ine 103.
+ine 101.
 (pdftex.def)             Requested size: 345.0pt x 172.49876pt.
  [1
 
@@ -295,66 +295,75 @@ df): PDF inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/error_estimation_
 1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [5 <../Figures/error_estimation_2.pdf> <../Figures/data_1_d.pdf
+>] [5 <../Figures/error_estimation_2.pdf>] [6 <../Figures/data_1_d.pdf> <../Fig
+ures/res_after_arma.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/data_1_d.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->] [6 <../Figures/res_after_arma.pdf> <../Figures/sacf_n_spacf_after_arma.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/sacf_n_spacf_afte
-r_arma.pdf): PDF inclusion: multiple pdfs with page group included in a single 
-page
->] <../Figures/error_estimation_3.pdf, id=310, 867.24pt x 578.16pt>
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/res_after_arma.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] <../Figures/error_estimation_3.pdf, id=282, 867.24pt x 578.16pt>
 File: ../Figures/error_estimation_3.pdf Graphic file (type pdf)
 
 <use ../Figures/error_estimation_3.pdf>
 Package pdftex.def Info: ../Figures/error_estimation_3.pdf used on input line 1
-21.
+25.
 (pdftex.def)             Requested size: 345.0pt x 229.99835pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 129.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
- [7 <../Figures/error_estimation_3.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 135.
+(Font)              <7> on input line 133.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 135.
+(Font)              <5> on input line 133.
 
-Overfull \hbox (11.31732pt too wide) in paragraph at lines 135--164
+Overfull \hbox (11.31732pt too wide) in paragraph at lines 133--161
  [] 
  []
 
 
-Overfull \hbox (23.8767pt too wide) in paragraph at lines 135--164
+Overfull \hbox (23.8767pt too wide) in paragraph at lines 133--161
  [] 
  []
 
-[8] (./Report_A0113538J.aux) ) 
+<../Figures/res_after_reg.pdf, id=283, 867.24pt x 433.62pt>
+File: ../Figures/res_after_reg.pdf Graphic file (type pdf)
+
+<use ../Figures/res_after_reg.pdf>
+Package pdftex.def Info: ../Figures/res_after_reg.pdf used on input line 170.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+
+<../Figures/sacf_n_spacf_after_reg.pdf, id=284, 867.24pt x 433.62pt>
+File: ../Figures/sacf_n_spacf_after_reg.pdf Graphic file (type pdf)
+
+<use ../Figures/sacf_n_spacf_after_reg.pdf>
+Package pdftex.def Info: ../Figures/sacf_n_spacf_after_reg.pdf used on input li
+ne 178.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+ [7 <../Figures/sacf_n_spacf_after_arma.pdf>] [8 <../Figures/error_estimation_3
+.pdf>] [9 <../Figures/res_after_reg.pdf> <../Figures/sacf_n_spacf_after_reg.pdf
+
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/sacf_n_spacf_afte
+r_reg.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>] (./Report_A0113538J.aux) ) 
 Here is how much of TeX's memory you used:
- 2358 strings out of 492995
- 36598 string characters out of 6132704
- 98905 words of memory out of 5000000
- 5868 multiletter control sequences out of 15000+600000
- 7895 words of font info for 28 fonts, out of 8000000 for 9000
+ 2357 strings out of 492995
+ 36735 string characters out of 6132704
+ 100931 words of memory out of 5000000
+ 5867 multiletter control sequences out of 15000+600000
+ 8241 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,7n,37p,460b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb>
-Output written on Report_A0113538J.pdf (8 pages, 420776 bytes).
+ 39i,8n,37p,748b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on Report_A0113538J.pdf (9 pages, 545729 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 463 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
