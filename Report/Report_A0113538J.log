@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -311,24 +311,50 @@ File: ../Figures/error_estimation_3.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../Figures/error_estimation_3.pdf used on input line 1
 21.
 (pdftex.def)             Requested size: 345.0pt x 229.99835pt.
- [7 <../Figures/error_estimation_3.pdf>] (./Report_A0113538J.aux) ) 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 129.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
+ [7 <../Figures/error_estimation_3.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 135.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 135.
+
+Overfull \hbox (11.31732pt too wide) in paragraph at lines 135--164
+ [] 
+ []
+
+
+Overfull \hbox (23.8767pt too wide) in paragraph at lines 135--164
+ [] 
+ []
+
+[8] (./Report_A0113538J.aux) ) 
 Here is how much of TeX's memory you used:
- 2337 strings out of 492995
- 36247 string characters out of 6132704
+ 2358 strings out of 492995
+ 36598 string characters out of 6132704
  98905 words of memory out of 5000000
- 5851 multiletter control sequences out of 15000+600000
- 7587 words of font info for 27 fonts, out of 8000000 for 9000
+ 5868 multiletter control sequences out of 15000+600000
+ 7895 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,37p,460b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Report_A0113538J.pdf (7 pages, 384560 bytes).
+ 39i,7n,37p,460b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb>
+Output written on Report_A0113538J.pdf (8 pages, 420776 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 389 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
