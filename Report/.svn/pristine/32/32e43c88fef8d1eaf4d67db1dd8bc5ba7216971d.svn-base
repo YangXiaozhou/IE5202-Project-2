@@ -1,0 +1,227 @@
+\documentclass[]{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Title Page
+\title{IE5202 Project 1 Report}
+\author{Yang Xiaozhou, A0113538}
+
+
+\begin{document}
+\maketitle
+
+\section{Data Exploration}
+
+To visualize the linear relationship between target variable and the predictors, various scatter plots with regression lines are examined. In Figure \ref{fig:pairplot1}, it can be seen that essential features have weak positive features with target variable. However, among themselves, several features have strong positive correlation, as seen in Figure \ref{fig:jointplot1}, Figure \ref{fig:jointplot2} and Figure \ref{fig:jointplot3}.
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.6\columnwidth]{../Figures/pairplot1}
+	\caption{Relationship between target variable and essential features.}
+	\label{fig:pairplot1}
+\end{figure}
+%
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.5\columnwidth]{../Figures/jointplot1}
+	\caption{Comment before base time and comment before base time (first 24 hours).}
+	\label{fig:jointplot1}
+\end{figure}
+%
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.5\columnwidth]{../Figures/jointplot2}
+	\caption{Comment before base time (mean of first 24 house) and comment before base time (median of first 24 hours).}
+	\label{fig:jointplot2}
+\end{figure}
+%
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.5\columnwidth]{../Figures/jointplot3}
+	\caption{Comment before base time (standard deviation) and comment before base time (maximum).}
+	\label{fig:jointplot3}
+\end{figure}
+%
+
+While other variables do not show strong linear relationship with the target variable, the box-plot of Page Category (4) does show that the difference in page category have some influence on the target variable, see Figure \ref{fig:boxplot1}.
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/box_page_cat}
+	\caption{Boxplot of page category and target variable.}
+	\label{fig:boxplot1}
+\end{figure}
+%
+
+Another thing that is worth noting is the many variables, including the target variable empirically has the form of a power distribution that is heavily right-tailed. This can be seen in Figure \ref{fig:density}. 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/density_plot}
+	\caption{Emprical density of variables ensemble power distributions.}
+	\label{fig:density}
+\end{figure}
+%
+
+
+
+\section{Simple Regression Model}
+\subsection{Model Building}
+Without any interaction terms, the candidates used in this regression model is:
+\begin{itemize}
+	\item 12 Mean of comment count in last 24 hours
+	\item 26 Maximum of comment difference between C2 and C3
+	\item 31 Comment of the last 24 hours but before base time
+	\item 33 Comment of the first 24 hours but before base time
+	\item 34 Comment difference between C2 and C3
+	\item 35 Time gap
+\end{itemize}
+
+Also, both the target variable and non-categorical variables are transformed through cube root function:
+\begin{equation}
+	\mathbf{Y} = \sqrt[3]{\mathbf{Y}}
+\end{equation}
+\begin{equation}
+	\mathbf{X} = \sqrt[3]{\mathbf{X}}
+\end{equation}
+
+\subsection{Result}
+Regression model summary can be found in Table \ref{tab:simple_summary} and the 10-fold cross-validation score can be found in Table \ref{tab:cv_result}.
+
+\begin{table}
+\begin{center}
+	\begin{tabular}{lclc}
+		\toprule
+		\textbf{Dep. Variable:}          & Target Variable  & \textbf{  R-squared:         } &     0.679   \\
+		\textbf{Model:}                  &       OLS        & \textbf{  Adj. R-squared:    } &     0.679   \\
+		\textbf{Method:}                 &  Least Squares   & \textbf{  F-statistic:       } & 1.442e+04   \\
+		\textbf{Date:}                   & Sat, 30 Sep 2017 & \textbf{  Prob (F-statistic):} &     0.00    \\
+		\textbf{Time:}                   &     16:57:42     & \textbf{  Log-Likelihood:    } &   -41766.   \\
+		\textbf{No. Observations:}       &       40949      & \textbf{  AIC:               } & 8.355e+04   \\
+		\textbf{Df Residuals:}           &       40942      & \textbf{  BIC:               } & 8.361e+04   \\
+		\textbf{Df Model:}               &           6      & \textbf{                     } &             \\
+		\bottomrule
+	\end{tabular}
+	\begin{tabular}{lcccccc}
+		& \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$>$$|$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+		\midrule
+		\textbf{Intercept}               &       1.3103  &        0.017     &    77.656  &         0.000        &        1.277    &        1.343     \\
+		\textbf{Comment\_Diff\_C2\_C3}   &       0.0434  &        0.002     &    21.095  &         0.000        &        0.039    &        0.047     \\
+		\textbf{CBBL24\_Mean}            &       0.2412  &        0.007     &    33.442  &         0.000        &        0.227    &        0.255     \\
+		\textbf{Comment\_Diff\_Max}      &      -0.0490  &        0.003     &   -18.366  &         0.000        &       -0.054    &       -0.044     \\
+		\textbf{Comment\_Bef\_Base\_F24} &       0.1302  &        0.005     &    28.297  &         0.000        &        0.121    &        0.139     \\
+		\textbf{Time\_Gap}               &      -0.4748  &        0.005     &   -94.776  &         0.000        &       -0.485    &       -0.465     \\
+		\textbf{Comment\_Bef\_Base\_L24} &       0.2573  &        0.005     &    47.253  &         0.000        &        0.247    &        0.268     \\
+		\bottomrule
+	\end{tabular}
+	\begin{tabular}{lclc}
+		\textbf{Omnibus:}       & 13471.617 & \textbf{  Durbin-Watson:     } &     1.847   \\
+		\textbf{Prob(Omnibus):} &    0.000  & \textbf{  Jarque-Bera (JB):  } & 167947.876  \\
+		\textbf{Skew:}          &    1.227  & \textbf{  Prob(JB):          } &      0.00   \\
+		\textbf{Kurtosis:}      &   12.613  & \textbf{  Cond. No.          } &      41.9   \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+\caption{OLS Regression Results}
+\label{tab:simple_summary}
+\end{table}
+
+This regression model with 6 predictors yield an adjusted $R^2$ score of 0.679, which indicates that the model is not a strong representation of the relationship between the target variable and predictors. Since the F-statistic is large and the related p-value is very close to zero, there is strong evidence at 95\% significant level to reject the null hypothesis that none of the predictors need to be in the model. 
+
+In the predictor table, coefficients of each predictor and the intercept value are reported. P-value of each of the predictor coefficients and the intercept is really close to 0 (reported as 0), this means that each of them have a value that is significantly different from 0 at 95\% significant level. 
+
+Durbin-Watson statistic is 1.847, which is close to 2. This indicates insignificant level of autocorrelation in the residuals produced by this regression model. Also, the condition number here is 41.9, which may suggest that there is no strong collinearity between the covariates. However, upon further investigation, there is actually strong correlation between predictor 26 and 31, as shown in this scatter plot (Figure \ref{fig:predictor_corr_1}).  
+
+\begin{table}
+\begin{tabular}{lrrrrr}
+	\toprule
+	{} &           \textbf{AIC} &       \textbf{AR2} &           \textbf{BIC} &       \textbf{MAE} &       \textbf{MSE} \\
+	\midrule
+	0 &  75424.644875 &  0.679733 &  75484.247912 &  0.474298 &  0.424924 \\
+	1 &  75279.927314 &  0.679242 &  75339.530350 &  0.481554 &  0.440806 \\
+	2 &  75382.979220 &  0.676362 &  75442.582256 &  0.469868 &  0.429351 \\
+	3 &  74930.871100 &  0.680298 &  74990.474136 &  0.484923 &  0.478971 \\
+	4 &  75323.441558 &  0.677845 &  75383.044595 &  0.475705 &  0.435906 \\
+	5 &  75105.521044 &  0.678363 &  75165.124080 &  0.473751 &  0.459903 \\
+	6 &  75247.145931 &  0.677549 &  75306.748967 &  0.468524 &  0.444252 \\
+	7 &  74762.242986 &  0.678381 &  74821.846022 &  0.489739 &  0.497682 \\
+	8 &  75331.911181 &  0.679615 &  75391.514218 &  0.476756 &  0.434924 \\
+	9 &  75117.412011 &  0.679476 &  75177.015237 &  0.478548 &  0.458729 \\
+	\textbf{Mean}  &  \textbf{75190.609722} &   \textbf{0.678686} &  \textbf{75250.212777} &   \textbf{0.477367} &   \textbf{0.450545} \\
+	\bottomrule
+\end{tabular}
+\caption{Cross Validation Result}
+\label{tab:cv_result}
+\end{table}
+
+To measure the prediction performance of the regression model, a 10-fold cross-validation technique is used to collect the result in Table \ref{tab:cv_result}. Mean score of AIC and BIC are smaller than that reported in the summary table by about 8000 while adjusted $R^2$ score is lower by about 0.001. This table also reports the mean absolute error (MAE) and mean square error (MSE). In my model selection process, however, adjusted $R^2$ is used as the selection criterion. 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.6\columnwidth]{../Figures/predictor_corr_1}
+	\caption{Strong collinearity between two of the predictors.}
+	\label{fig:predictor_corr_1}
+\end{figure}
+%
+
+The QQ-plot plots the empirical quantiles of residuals and the quantiles of a standard normal distribution. In Figure \ref{fig:qq_plot_simple}, the sample quantiles do not form a straight line with the theoretical quantiles at both the left and right tails. This suggest that the normality assumption of the error term $\epsilon_i$ is violated. 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.6\columnwidth]{../Figures/normality_check_simple}
+	\caption{QQ-plot to check residual normality assumption.}
+	\label{fig:qq_plot_simple}
+\end{figure}
+%
+
+By examining the plot of studentized residuals and fitted values, several assumptions of the linear regression model could be verified. Figure \ref{fig:residual_plot_simple} shows the plot for this simple regression model. It seems that the residuals have a mean that is larger than 0 because more points lie above the zero line. Also, the variance of the residuals appear to increase with the fitted value, this suggests a violation of the constant variance assumption. Finally, there are plenty of residuals which have very large values (i.e. deviation from 0 with more than 3 standard deviations). This may indicate that the model is not adequate enough to fit the data well. 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=.6\columnwidth]{../Figures/residual_plot_simple}
+	\caption{Residual plot of the simple regression model.}
+	\label{fig:residual_plot_simple}
+\end{figure}
+%
+
+
+Two plots with partial regression are reported here with 1. Post share count (Figure \ref{fig:prp_simple_1}) and 2. Mean of comment count in last 24 hours (Figure \ref{fig:prp_simple_2}). From both of the top left plots, it can be seen that the model tends to underestimate the target value as the bulk of fitted values lie below the target values. This may have to do with the fact that the target variable follows a heavily right-values empirical distribution. 
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/prp_simple_1}
+	\caption{Plots on predictor: Post share.}
+	\label{fig:prp_simple_1}
+\end{figure}
+%
+%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=1\columnwidth]{../Figures/prp_simple_2}
+	\caption{Plots on predictor: Mean of comment count in last 24 hours.}
+	\label{fig:prp_simple_2}
+\end{figure}
+%
+
+
+
+
+
+
+
+
+\section{Complex Regression Model}
+
+
+
+
+
+
+
+
+
+\end{document}          
