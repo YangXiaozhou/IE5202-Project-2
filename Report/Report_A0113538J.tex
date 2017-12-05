@@ -17,27 +17,27 @@
 
 The exchange rate from 1980 to 1995 seems to have experienced three distinct phases with a drastic drop around 1986. The three phases are shown in Fig \ref{fig:jpy_usd_three_peridos}.
 %
-\begin{figure}[hbtp]
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=1\columnwidth]{../Figures/jpy_usd_three_periods.pdf}
+	\includegraphics[width=.5\columnwidth]{../Figures/jpy_usd_three_periods.pdf}
 	\caption{JPY/USD During Three Separate Periods.}
 	\label{fig:jpy_usd_three_peridos}
 \end{figure}
 %
 The time series exhibits strong autocorrelation even beyong 100 lags as shown in Fig \ref{fig:sacf_n_spacf_plot}. SPACF plot shows the lag cuts off after order 1. This indicates an AR(1) model might be appropriate for the time series. 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\columnwidth]{../Figures/sacf_n_spacf_plot.pdf}
+	\includegraphics[width=.8\columnwidth]{../Figures/sacf_n_spacf_plot.pdf}
 	\caption{SACF and SPACF Plot for JPY/USD.}
 	\label{fig:sacf_n_spacf_plot}
 \end{figure}
 %
 Judging from the lag plots in Fig \ref{fig:three_lag_plots}, historical values are very good indicators of the future value, at least in the near future (less than 100 days). 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\columnwidth]{../Figures/three_lag_plots.pdf}
+	\includegraphics[width=.8\columnwidth]{../Figures/three_lag_plots.pdf}
 	\caption{Lag Plots at Three Different Level: 1, 10, 100.}
 	\label{fig:three_lag_plots}
 \end{figure}
@@ -49,7 +49,7 @@ Also, no obvious seasonal patterns could be observed.
 \subsection{Exponential Smoothing Model}
 With exponentially weighted moving average, due to the strong autocorrelation, the optimal smoothing parameter, alpha, is found to be 1 for the smallest root mean square error (RMSE), see Fig \ref{fig:optimal_alpha_ewma}.
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/optimal_alpha_ewma.pdf}
 	\caption{Optimal Alpha.}
@@ -62,7 +62,7 @@ Similar results are shown when double exponential smoothing model is constructed
 Several ARIMA models are built based on both original data and log-transformed data. 10-fold cross validation RMSEs of 1-step-ahead forecast are reported in Fig \ref{fig:error_estimation_1} for the orginal data and Fig \ref{fig:error_estimation_2} for log-transformed data. For both types of data, AR(1) and MA(1) models on 1st order differencing transformed data perform the best, with the lowest RMSE of 1.048, shown in the two figures as the red horizontal dash lines. This is expected since the foreign exchange rate is a highly autocorrelated time series, hence immediate past values are actually great predictors of the next-day value.
 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/error_estimation_1.pdf}
 	\caption{Error Estimation on Original Data.}
@@ -70,7 +70,7 @@ Several ARIMA models are built based on both original data and log-transformed d
 \end{figure}
 %
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/error_estimation_2.pdf}
 	\caption{Error Estimation on Log-transformed Data.}
@@ -80,7 +80,7 @@ Several ARIMA models are built based on both original data and log-transformed d
 
 Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data is not stationary, a first order differencing transformation is applied to make it stationary. The resultant time series as shown in Fig \ref{fig:data_1_d} is much more stationary than the original series. Residuals from ARIMA(0,1,1) model are uncorrelated and roughly follow a normal distribution with zero mean, as shown in Fig \ref{fig:res_after_arma} and Fig \ref{fig:sacf_n_spacf_after_arma}. This indicates that ARIMA(0,0,1) is an appropriate model for the time series. 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/data_1_d.pdf}
 	\caption{Data after 1st Order Differencing.}
@@ -88,7 +88,7 @@ Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data i
 \end{figure}
 %
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/res_after_arma.pdf}
 	\caption{Residuals of ARIMA(0,1,1) Model.}
@@ -96,7 +96,7 @@ Hence ARIMA(0,1,1) is chosen to model the time series. Since the original data i
 \end{figure}
 %
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/sacf_n_spacf_after_arma.pdf}
 	\caption{SACF and SPACF of Residuals from ARIMA(0,1,1) Model.}
@@ -120,7 +120,7 @@ However, once the regression model has lagged data as one of the predictors, the
 As seen from Fig \ref{fig:error_estimation_3}, The fourth model performs the best, obtaining the lowest RMSE of 1.048 wihch is identical as the ARIMA(0,1,1) model. This is not surprising since both models utilized information on Lag 1 data and the difference between previous two values. The whole dataset was fitted with the best regression model and Table \ref{tab:regression_results} reports the regression summary. Each of the model parameters are statistically significant and both R-scores are very high. The residuals of the model seem to be uncorrelated with each other (Fig \ref{fig:sacf_n_spacf_after_reg}) and follows a normal distribution with zero mean (Fig \ref{fig:res_after_reg}). 
 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/error_estimation_3.pdf}
 	\caption{Error Estimation of Various Regression Models.}
@@ -165,7 +165,7 @@ As seen from Fig \ref{fig:error_estimation_3}, The fourth model performs the bes
 \end{table}
 
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/res_after_reg.pdf}
 	\caption{Residuals of Regression Model.}
@@ -173,7 +173,7 @@ As seen from Fig \ref{fig:error_estimation_3}, The fourth model performs the bes
 \end{figure}
 %
 %
-\begin{figure}[hbtp]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\columnwidth]{../Figures/sacf_n_spacf_after_reg.pdf}
 	\caption{SACF and SPACF of Residuals from Regression Model.}

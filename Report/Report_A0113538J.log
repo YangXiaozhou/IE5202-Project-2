@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  19 NOV 2017 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.21)  5 DEC 2017 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -216,7 +216,7 @@ File: ../Figures/jpy_usd_three_periods.pdf Graphic file (type pdf)
 <use ../Figures/jpy_usd_three_periods.pdf>
 Package pdftex.def Info: ../Figures/jpy_usd_three_periods.pdf used on input lin
 e 22.
-(pdftex.def)             Requested size: 345.0pt x 344.99754pt.
+(pdftex.def)             Requested size: 172.5pt x 172.49216pt.
 
 <../Figures/sacf_n_spacf_plot.pdf, id=2, 867.24pt x 433.62pt>
 File: ../Figures/sacf_n_spacf_plot.pdf Graphic file (type pdf)
@@ -224,14 +224,14 @@ File: ../Figures/sacf_n_spacf_plot.pdf Graphic file (type pdf)
 <use ../Figures/sacf_n_spacf_plot.pdf>
 Package pdftex.def Info: ../Figures/sacf_n_spacf_plot.pdf used on input line 31
 .
-(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+(pdftex.def)             Requested size: 276.00105pt x 138.00034pt.
 
 <../Figures/three_lag_plots.pdf, id=3, 867.24pt x 433.62pt>
 File: ../Figures/three_lag_plots.pdf Graphic file (type pdf)
 
 <use ../Figures/three_lag_plots.pdf>
 Package pdftex.def Info: ../Figures/three_lag_plots.pdf used on input line 40.
-(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+(pdftex.def)             Requested size: 276.00105pt x 138.00034pt.
 
 <../Figures/optimal_alpha_ewma.pdf, id=4, 433.62pt x 289.08pt>
 File: ../Figures/optimal_alpha_ewma.pdf Graphic file (type pdf)
@@ -286,21 +286,11 @@ ine 101.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <../
-Figures/jpy_usd_three_periods.pdf>] [3 <../Figures/sacf_n_spacf_plot.pdf> <../F
-igures/three_lag_plots.pdf
+Figures/jpy_usd_three_periods.pdf> <../Figures/sacf_n_spacf_plot.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/three_lag_plots.p
-df): PDF inclusion: multiple pdfs with page group included in a single page
->] [4 <../Figures/optimal_alpha_ewma.pdf> <../Figures/error_estimation_1.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/error_estimation_
-1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [5 <../Figures/error_estimation_2.pdf>] [6 <../Figures/data_1_d.pdf> <../Fig
-ures/res_after_arma.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/res_after_arma.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
->] <../Figures/error_estimation_3.pdf, id=282, 867.24pt x 578.16pt>
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/sacf_n_spacf_plot
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] <../Figures/error_estimation_3.pdf, id=67, 867.24pt x 578.16pt>
 File: ../Figures/error_estimation_3.pdf Graphic file (type pdf)
 
 <use ../Figures/error_estimation_3.pdf>
@@ -321,32 +311,40 @@ Overfull \hbox (23.8767pt too wide) in paragraph at lines 133--161
  [] 
  []
 
-<../Figures/res_after_reg.pdf, id=283, 867.24pt x 433.62pt>
+<../Figures/res_after_reg.pdf, id=68, 867.24pt x 433.62pt>
 File: ../Figures/res_after_reg.pdf Graphic file (type pdf)
 
 <use ../Figures/res_after_reg.pdf>
 Package pdftex.def Info: ../Figures/res_after_reg.pdf used on input line 170.
 (pdftex.def)             Requested size: 345.0pt x 172.49876pt.
 
-<../Figures/sacf_n_spacf_after_reg.pdf, id=284, 867.24pt x 433.62pt>
+<../Figures/sacf_n_spacf_after_reg.pdf, id=69, 867.24pt x 433.62pt>
 File: ../Figures/sacf_n_spacf_after_reg.pdf Graphic file (type pdf)
 
 <use ../Figures/sacf_n_spacf_after_reg.pdf>
 Package pdftex.def Info: ../Figures/sacf_n_spacf_after_reg.pdf used on input li
 ne 178.
 (pdftex.def)             Requested size: 345.0pt x 172.49876pt.
- [7 <../Figures/sacf_n_spacf_after_arma.pdf>] [8 <../Figures/error_estimation_3
-.pdf>] [9 <../Figures/res_after_reg.pdf> <../Figures/sacf_n_spacf_after_reg.pdf
+ [3 <../Figures/three_lag_plots.pdf>] [4 <../Figures/optimal_alpha_ewma.pdf>] [
+5 <../Figures/error_estimation_1.pdf> <../Figures/error_estimation_2.pdf
 
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/error_estimation_
+2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [6 <../Figures/data_1_d.pdf> <../Figures/res_after_arma.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/sacf_n_spacf_afte
-r_reg.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/res_after_arma.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] [7 <../Figures/sacf_n_spacf_after_arma.pdf> <../Figures/error_estimation_3.p
+df
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/error_estimation_
+3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [8 <../Figures/res_after_reg.pdf>] [9 <../Figures/sacf_n_spacf_after_reg.pdf
 >] (./Report_A0113538J.aux) ) 
 Here is how much of TeX's memory you used:
  2357 strings out of 492995
  36735 string characters out of 6132704
- 100931 words of memory out of 5000000
+ 102931 words of memory out of 5000000
  5867 multiletter control sequences out of 15000+600000
  8241 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -360,7 +358,7 @@ amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb>
-Output written on Report_A0113538J.pdf (9 pages, 545729 bytes).
+Output written on Report_A0113538J.pdf (9 pages, 545423 bytes).
 PDF statistics:
  463 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams

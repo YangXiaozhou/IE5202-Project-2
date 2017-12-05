@@ -5,6 +5,6 @@ Project Goal: Model JPY/USD Exchange Rate and Predict Future Values
 
 Method: Time-series forecasting methods
 
-Language: Python
+Language: Python 3
 
 Environment: Jupyter-Notebook
